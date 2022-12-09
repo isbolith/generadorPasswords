@@ -1,16 +1,14 @@
-// Numero aleatorio dentro de un rango personalizado
+/* Numero aleatorio dentro de un rango personalizado
 const generarAleatoio = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min
-}
-
-let generar = document.getElementById('btngenerar')
-let resultado = document.getElementById('nodopassword')
-resultado.innerHTML += generar.addEventListener('click', generarPassword)
+} */
 
 // Generador de Passwords
+let resultado = document.getElementById('nodopassword') 
+
 let numeros = "0123456789"
 let letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let simbolos = "<>,;.:-_+*^!$%&/()=?¿"
+let simbolos = "<>,;.:-_+*!$%&/()=?¿"
 let todo = numeros + letras + simbolos
 
 const generarPassword = (longitud) => {
@@ -21,3 +19,5 @@ const generarPassword = (longitud) => {
     }
     return password
 }
+
+resultado.innerHTML = generarPassword(10)
